@@ -12,6 +12,10 @@ body{
     border-bottom:  solid black 1px;
     gap: 10px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 .navbar__s1__title{
     color: #A335F0;
@@ -24,11 +28,13 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
+
 }
 .navbar__s2 input{
     width: 100%;
     border: none;
     font-size: 16px;
+    background-color: transparent;
 }
 
 .navbar__s2 input:focus{
@@ -38,8 +44,28 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
+    cursor: pointer;
+}
+/* My learning */
+.mylearning{
+    position: relative;
+  
+}
+.mylearning__popup{
+    position: absolute;
+    border: solid black 2px;
+    background-color: white;
+    width: 100px;
+    top: 150%;
+    right: 0;
+    padding: 20px;
+    display: none;
+}   
+.mylearning:hover .mylearning__popup{
+    display: block;
 }
 .categories{
+    cursor: pointer;
     padding: 10px;
     display: flex;
     justify-content: space-around;
@@ -56,8 +82,20 @@ body{
 .categories p:hover{
     background-color: #866295;
 }
+.sale-image{
+    position: relative;
+}
 .sale-image img{
     width: 100%;
+}
+.sale-image__offer{
+    width: 35%;
+    border: solid black 2px;
+    background-color: white;
+    position: absolute;     
+    padding: 2%;
+    top: 10%;
+    left: 10%;
 }
 .course-card{
     width: 250px;
@@ -84,6 +122,7 @@ body{
 
 }
 .topics__container{
+    cursor: pointer;
     display: flex;
     gap: 10px;
     margin-top: 10px;
@@ -173,16 +212,10 @@ body{
 }
 
 /* Animation */
-@keyframes fadeInUp {
+ @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Optional: stagger animation delays */
-.course-card:nth-child(1) { animation-delay: 0.2s; }
-.course-card:nth-child(2) { animation-delay: 0.4s; }
-.course-card:nth-child(3) { animation-delay: 0.6s; }
-.course-card:nth-child(4) { animation-delay: 0.8s; }
+} 
 
