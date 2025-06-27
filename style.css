@@ -77,10 +77,14 @@ body{
     color: white;
     padding: 10px;
     border-radius: 30px;
+     border: solid #A635F3 1px;
 
 }
 .categories p:hover{
-    background-color: #866295;
+    background-color: whitesmoke;
+    color: black;
+    transition-duration: 1s;
+    border: solid #A635F3 1px;
 }
 .sale-image{
     position: relative;
@@ -96,6 +100,20 @@ body{
     padding: 2%;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 .course-card{
     width: 250px;
